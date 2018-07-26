@@ -11,11 +11,11 @@ export default {
   props: {
     error: {
       type: Object,
-      default() {
+      default () {
         return null
       }
     }
   },
-  layout: "blog" // 你可以为错误页面指定自定义的布局
+  layout: 'blog' // 你可以为错误页面指定自定义的布局
 }
 </script>

@@ -1,19 +1,31 @@
 <template>
   <div>
-    <h1>Hello world</h1>
-    <div>hahs</div>
-    <p>{{ msg }}</p>
-    <button>{{ btnTxt }}</button>
+    <p>Hello World</p>
+    <button @click="increment">{{ btnTxt }}</button>
+    <p>{{ counter }}</p>
+    <nuxt-link to="/about">about</nuxt-link>
+    <p><nuxt-link to="/posts">Blog</nuxt-link></p>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  data() {
+  data () {
     return {
-      msg:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facere? Consequuntur non inventore quibusdam? In saepe voluptates perferendis totam ad qui quaerat autem, quidem quasi culpa modi porro obcaecati ullam!",
-      btnTxt: "按钮"
+      btnTxt: '点我试试',
+      title: 'Hello world'
+    }
+  },
+  fatch ({ store }) {
+    store.commit('increment')
+  },
+  computed: mapState([
+    'counter'
+  ]),
+  methods: {
+    increment () {
+      this.$store.commit('increment')
     }
   }
 }
