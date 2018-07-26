@@ -49,5 +49,13 @@ module.exports = {
     routes: [
       '/posts/1'
     ]
-  }
+  },
+  plugins: [
+    // 引入elementUI组件
+    '~plugins/ElementUI'
+  ],
+  css: [
+    // 引入elementUI样式
+    'element-ui/lib/theme-chalk/index.css'
+  ]
 }

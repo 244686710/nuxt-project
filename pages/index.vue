@@ -1,5 +1,7 @@
 <template>
   <div>
+    <el-input></el-input>
+    <el-button type="primary">element Btn</el-button>
     <p>Hello World</p>
     <button @click="increment">{{ btnTxt }}</button>
     <p>{{ counter }}</p>
