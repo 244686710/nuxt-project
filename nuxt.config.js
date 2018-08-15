@@ -33,7 +33,8 @@ module.exports = {
       }
     },
     vendor: [
-      'axios'
+      'axios',
+      'element-ui'
     ]
   },
   modules: [
