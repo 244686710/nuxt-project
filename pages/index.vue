@@ -1,12 +1,15 @@
 <template>
   <div>
     <el-input></el-input>
-    <el-button type="primary">element Btn</el-button>
-    <p>Hello World</p>
+    <el-row>
+      <el-col :span="12">
+        <el-button type="primary">element Btn</el-button>
+      </el-col>
+    </el-row>
+    <h3>Hello World</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa esse voluptatum libero sapiente debitis minima molestiae cum perferendis quas sunt. Maiores, nam eius distinctio quibusdam iusto saepe qui nemo reprehenderit!</p>
     <button @click="increment">{{ btnTxt }}</button>
     <p>{{ counter }}</p>
-    <nuxt-link to="/about">about</nuxt-link>
-    <p><nuxt-link to="/posts">Blog</nuxt-link></p>
   </div>
 </template>
 

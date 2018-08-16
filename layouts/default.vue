@@ -1,8 +1,18 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
+  <el-container>
+    <el-header ><Header></Header></el-header>
+    <el-main>
+      <nuxt></nuxt>
+    </el-main>
+  </el-container>
 </template>
+<script>
+import Header from '@/components/Header'
+export default {
+  components: { Header }
+}
+</script>
+
 
 <style>
 html {
@@ -51,5 +61,8 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+.nuxt-link-exact-active {
+  color: #3b8070
 }
 </style>

@@ -10,8 +10,9 @@
 import axios from 'axios'
 
 export default {
+  layout: 'blog',
   async asyncData ({ params }) {
-    let { data } = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
+    let { data } = await axios.get(`/api/posts/${params.id}`)
     return { post: data }
   },
   head () {
